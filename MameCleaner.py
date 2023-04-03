@@ -120,7 +120,7 @@ def generate_folder_name(cat_name):
         cat_name_list = [global_config["mature_rom_folder"]] + [x.strip().rstrip(".") for x in
                                                                 cat_name.replace("* Mature *", "").split("/")]
     else:
-        cat_name_list = [x.strip().rstrip(".") for x in cat_name.split("/")]
+        cat_name_list = [x.strip().replace(".", "") for x in cat_name.split("/")]
     path_name = "/".join(cat_name_list)
 
     return path_name, is_mature
