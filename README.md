@@ -1,0 +1,2 @@
+<h1>Ultimate Mame Rom Clean, Categorize And Upload Script</h1>
+Yet another Python Script to clean non-working roms, protos, betas etc. and categorize by genres. It also copies files to destination folder.
