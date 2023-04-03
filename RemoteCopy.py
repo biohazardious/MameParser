@@ -20,7 +20,6 @@ class RemoteCopy:
         # print(self.username, self.password, self.server_ip, self.remote_path)
 
     def _parse_connection_string(self, conn_str):
-        # pattern = r'smb:\/\/(?:([\w-]+)(?::([\w-]+))?@)?([\d.]+)\/([\w-]+)'
         pattern = r'smb:\/\/(?:([\w-]+)(?::([\w-]+))?@)?([\d.]+)\/([\w\/-]+)'
         # parsing the input string
         match = re.match(pattern, conn_str)
@@ -31,6 +30,8 @@ class RemoteCopy:
             self.server_ip = match.group(3)
             self.share_name = match.group(4).split('/')[0]
             self.remote_path = '/'.join(match.group(4).split('/')[1:])
+            if not self.remote_path.endswith('/'):
+                self.remote_path += '/'
         else:
             raise ValueError('Invalid connection string')
 

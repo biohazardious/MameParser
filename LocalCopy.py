@@ -5,6 +5,8 @@ import time
 
 class LocalCopy:
     def __init__(self, copy_path):
+        if not copy_path.endswith(os.path.sep):
+            copy_path += os.path.sep
         self.copy_path = copy_path
         self.source = None
         self.destination = None
