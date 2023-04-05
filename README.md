@@ -26,6 +26,7 @@ you can use it if you need to categorize that bulk of MAME roms.
 
 - Download any rom file
 - Download any mame information file
+- Fix roms, missing files etc.
 - Scrape file datas, videos, images etc.
 - Compare only filenames and filesize only, no MD5 or etc. cos of speed reasons.
 
@@ -41,7 +42,7 @@ you can use it if you need to categorize that bulk of MAME roms.
 - Put necessary MAME files on MameFiles or your specific destination
 - It's important to use same MAME version for all of your MAME specific files
 -
-    - Ex: if you are using 0.251 romset
+    - E.g.: if you are using 0.251 romset
 -
     - use mame0251.xml (can found in Mame official webpage)
 -
